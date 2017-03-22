@@ -5,25 +5,44 @@
 
 % color definitions
 \definecolor{uipaleblue}{RGB}{96,123,139}
+\definecolor{redline}{RGB}{217,46,57}
 
 % footer styling
 \setbeamercolor{section in footer}{fg=white,bg=uipaleblue}
 \setbeamercolor{subsection in footer}{fg=white,bg=uipaleblue}
 \setbeamercolor{pagenumber in footer}{fg=white,bg=uipaleblue}
+\setbeamercolor{footer line}{fg=redline,bg=redline}
+\setbeamercolor{footer text}{fg=black,bg=white}
 
 \defbeamertemplate*{footline}{bunsentheme}
 {
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,center]{section in footer}%
-    \inserttitle
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in footer}%
-    \insertsectionhead
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
-   \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.25ex,dp=0ex,sep=.5ex]{footer line}%
   \end{beamercolorbox}}%
+  
+  \hbox{%
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=.25cm,dp=1ex,center]{footer text}%
+  	\insertauthor
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=.25cm,dp=1ex,center]{footer text}%
+  	\insertsectionhead
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[wd=.34\paperwidth,ht=.25cm,dp=1ex,center,rightskip=2em]{footer text}%
+  	\inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}
+  }%
+  
+  %%% OLD FOOTER
+  %\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex,center]{section in footer}%
+  %  \inserttitle
+  %\end{beamercolorbox}%  
+  %\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{subsection in footer}%
+  %  \insertsectionhead
+  %\end{beamercolorbox}%  
+  %\begin{beamercolorbox}[wd=.34\paperwidth,ht=2.25ex,dp=1ex,center]{pagenumber in footer}%
+  % \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  %\end{beamercolorbox}%
   \vskip0pt%
 }
 
